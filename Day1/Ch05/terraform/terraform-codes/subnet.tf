@@ -1,11 +1,11 @@
-resource "aws_subnet" "test-public-subnet1" {
+resource "aws_subnet" "skt-user03-public-subnet1" {
 
   depends_on = [
-    aws_vpc.test-vpc
+    aws_vpc.skt-user03-vpc
   ]
 
   assign_ipv6_address_on_creation                = "false"
-  cidr_block                                     = "172.32.0.0/20"
+  cidr_block                                     = "172.35.0.0/20"
   enable_dns64                                   = "false"
   enable_resource_name_dns_a_record_on_launch    = "false"
   enable_resource_name_dns_aaaa_record_on_launch = "false"
@@ -14,29 +14,29 @@ resource "aws_subnet" "test-public-subnet1" {
   private_dns_hostname_type_on_launch            = "ip-name"
 
   tags = {
-    Name                                     = "test-public-subnet1"
-    "kubernetes.io/cluster/test-eks-cluster" = "shared"
+    Name                                     = "skt-user03-public-subnet1"
+    "kubernetes.io/cluster/skt-user03-eks-cluster" = "shared"
     "kubernetes.io/role/elb"                 = 1
   }
 
   tags_all = {
-    Name                                     = "test-public-subnet1"
-    "kubernetes.io/cluster/test-eks-cluster" = "shared"
+    Name                                     = "skt-user03-public-subnet1"
+    "kubernetes.io/cluster/skt-user03-eks-cluster" = "shared"
     "kubernetes.io/role/elb"                 = 1
   }
 
-  vpc_id = aws_vpc.test-vpc.id
+  vpc_id = aws_vpc.skt-user03-vpc.id
   availability_zone = "ap-southeast-1a"
 }
 
-resource "aws_subnet" "test-public-subnet3" {
+resource "aws_subnet" "skt-user03-public-subnet3" {
 
   depends_on = [
-    aws_vpc.test-vpc
+    aws_vpc.skt-user03-vpc
   ]
 
   assign_ipv6_address_on_creation                = "false"
-  cidr_block                                     = "172.32.16.0/20"
+  cidr_block                                     = "172.35.16.0/20"
   enable_dns64                                   = "false"
   enable_resource_name_dns_a_record_on_launch    = "false"
   enable_resource_name_dns_aaaa_record_on_launch = "false"
@@ -45,17 +45,17 @@ resource "aws_subnet" "test-public-subnet3" {
   private_dns_hostname_type_on_launch            = "ip-name"
 
   tags = {
-    Name                                     = "test-public-subnet3"
-    "kubernetes.io/cluster/test-eks-cluster" = "shared"
+    Name                                     = "skt-user03-public-subnet3"
+    "kubernetes.io/cluster/skt-user03-eks-cluster" = "shared"
     "kubernetes.io/role/elb"                 = 1
   }
 
   tags_all = {
-    Name                                     = "test-public-subnet3"
-    "kubernetes.io/cluster/test-eks-cluster" = "shared"
+    Name                                     = "skt-user03-public-subnet3"
+    "kubernetes.io/cluster/skt-user03-eks-cluster" = "shared"
     "kubernetes.io/role/elb"                 = 1
   }
 
-  vpc_id = aws_vpc.test-vpc.id
+  vpc_id = aws_vpc.skt-user03-vpc.id
   availability_zone = "ap-southeast-1c"
 }

@@ -79,3 +79,10 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+.terraform/*
+.terraform.lock.hcl
+
+build/
+.idea
+.gradle
