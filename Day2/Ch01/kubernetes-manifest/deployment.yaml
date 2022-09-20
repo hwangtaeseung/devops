@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: deployment-test
+  name: deployment-skt-user03
 spec:
   selector:
     matchLabels:
-      app.kubernetes.io/name: app-test
-  replicas: 1
+      app.kubernetes.io/name: app-skt-user03
+  replicas: 2
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: app-test
+        app.kubernetes.io/name: app-skt-user03
     spec:
       containers:
-      - image: <AWS ECR Repository URL>/test:1.0
+      - image: 255380800200.dkr.ecr.ap-southeast-1.amazonaws.com/skt-user03:latest
         imagePullPolicy: Always
-        name: app-test
+        name: app-skt-user03
         ports:
         - containerPort: 80
