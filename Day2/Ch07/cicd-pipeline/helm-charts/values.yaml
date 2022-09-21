@@ -5,10 +5,10 @@
 replicaCount: 2
 
 image:
-  repository: 255380800200.dkr.ecr.ap-southeast-1.amazonaws.com/skt-user03:green
+  repository: 255380800200.dkr.ecr.ap-southeast-1.amazonaws.com/skt-user03
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: orange
+  tag: green
 
 
 container:
